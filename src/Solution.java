@@ -49,17 +49,32 @@ public class Solution {
 	}
 	
 	//4th
-	public static void distance4() {
+	public static int distance4() {
 		String s=sc.next();
 		int i=0,j=s.length()-1;
+		while(i<j) {
+			if(s.charAt(i)!=s.charAt(j)) {
+				return Math.max(j-i, i);
+			}
+			else {
+				i++;
+			}
+		}
+		return j-i;
 		
 		
 	}
 	
 	
-	
+	public static int countChocolate5(int n) {
+	    long MOD = 1_000_000_007L;
+	    long res = (long) n * (n + 1) / 2; 
+	    res += 4L * (n / 5);               
+	    return (int) (res % MOD);
+	}
+
 	public static void main(String[] args) {
-		
+		//call the function to which ever code you want to execute
 		
 
 	}
